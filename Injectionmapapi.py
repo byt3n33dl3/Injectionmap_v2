@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright (c) 2006-2024 sqlmap developers (https://sqlmap.org/)
+Copyright (c) 2006-2024 Injectionmap_v2 developers (https://Injectionmap_v2.org/)
 See the file 'LICENSE' for copying permission
 """
 
@@ -74,7 +74,7 @@ from lib.utils.api import client
 from lib.utils.api import server
 
 try:
-    from sqlmap import modulePath
+    from Injectionmap_v2 import modulePath
 except ImportError:
     def modulePath():
         return getUnicode(os.path.dirname(os.path.realpath(__file__)), encoding=sys.getfilesystemencoding() or UNICODE_ENCODING)

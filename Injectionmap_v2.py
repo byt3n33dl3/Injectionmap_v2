@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright (c) 2006-2024 sqlmap developers (https://sqlmap.org/)
+Copyright (c) 2006-2024 Injectionmap_v2 developers (https://Injectionmap_v2.org/)
 See the file 'LICENSE' for copying permission
 """
 
@@ -15,7 +15,7 @@ try:
     try:
         __import__("lib.utils.versioncheck")  # this has to be the first non-standard import
     except ImportError:
-        sys.exit("[!] wrong installation detected (missing modules). Visit 'https://github.com/sqlmapproject/sqlmap/#installation' for further details")
+        sys.exit("[!] wrong installation detected (missing modules). Visit 'https://github.com/Injectionmap_v2project/Injectionmap_v2/#installation' for further details")
 
     import bdb
     import glob
@@ -73,10 +73,10 @@ try:
     from lib.core.data import kb
     from lib.core.datatype import OrderedSet
     from lib.core.enums import MKSTEMP_PREFIX
-    from lib.core.exception import SqlmapBaseException
-    from lib.core.exception import SqlmapShellQuitException
-    from lib.core.exception import SqlmapSilentQuitException
-    from lib.core.exception import SqlmapUserQuitException
+    from lib.core.exception import Injectionmap_v2BaseException
+    from lib.core.exception import Injectionmap_v2ShellQuitException
+    from lib.core.exception import Injectionmap_v2SilentQuitException
+    from lib.core.exception import Injectionmap_v2UserQuitException
     from lib.core.option import init
     from lib.core.option import initOptions
     from lib.core.patch import dirtyPatches
@@ -118,29 +118,29 @@ def checkEnvironment():
         os.path.isdir(modulePath())
     except UnicodeEncodeError:
         errMsg = "your system does not properly handle non-ASCII paths. "
-        errMsg += "Please move the sqlmap's directory to the other location"
+        errMsg += "Please move the Injectionmap_v2's directory to the other location"
         logger.critical(errMsg)
         raise SystemExit
 
     if LooseVersion(VERSION) < LooseVersion("1.0"):
         errMsg = "your runtime environment (e.g. PYTHONPATH) is "
         errMsg += "broken. Please make sure that you are not running "
-        errMsg += "newer versions of sqlmap with runtime scripts for older "
+        errMsg += "newer versions of Injectionmap_v2 with runtime scripts for older "
         errMsg += "versions"
         logger.critical(errMsg)
         raise SystemExit
 
     # Patch for pip (import) environment
-    if "sqlmap.sqlmap" in sys.modules:
+    if "Injectionmap_v2.Injectionmap_v2" in sys.modules:
         for _ in ("cmdLineOptions", "conf", "kb"):
             globals()[_] = getattr(sys.modules["lib.core.data"], _)
 
-        for _ in ("SqlmapBaseException", "SqlmapShellQuitException", "SqlmapSilentQuitException", "SqlmapUserQuitException"):
+        for _ in ("Injectionmap_v2BaseException", "Injectionmap_v2ShellQuitException", "Injectionmap_v2SilentQuitException", "Injectionmap_v2UserQuitException"):
             globals()[_] = getattr(sys.modules["lib.core.exception"], _)
 
 def main():
     """
-    Main function of sqlmap when running from command line.
+    Main function of Injectionmap_v2 when running from command line.
     """
 
     try:
@@ -210,7 +210,7 @@ def main():
 
                                     crawl(target)
                                 except Exception as ex:
-                                    if target and not isinstance(ex, SqlmapUserQuitException):
+                                    if target and not isinstance(ex, Injectionmap_v2UserQuitException):
                                         errMsg = "problem occurred while crawling '%s' ('%s')" % (target, getSafeExString(ex))
                                         logger.error(errMsg)
                                     else:
@@ -230,18 +230,18 @@ def main():
                         else:
                             raise
 
-    except SqlmapUserQuitException:
+    except Injectionmap_v2UserQuitException:
         if not conf.batch:
             errMsg = "user quit"
             logger.error(errMsg)
 
-    except (SqlmapSilentQuitException, bdb.BdbQuit):
+    except (Injectionmap_v2SilentQuitException, bdb.BdbQuit):
         pass
 
-    except SqlmapShellQuitException:
-        cmdLineOptions.sqlmapShell = False
+    except Injectionmap_v2ShellQuitException:
+        cmdLineOptions.Injectionmap_v2Shell = False
 
-    except SqlmapBaseException as ex:
+    except Injectionmap_v2BaseException as ex:
         errMsg = getSafeExString(ex)
         logger.critical(errMsg)
 
@@ -379,7 +379,7 @@ def main():
             raise SystemExit
 
         elif "AttributeError: unable to access item" in excMsg and re.search(r"3\.11\.\d+a", sys.version):
-            errMsg = "there is a known issue when sqlmap is run with ALPHA versions of Python 3.11. "
+            errMsg = "there is a known issue when Injectionmap_v2 is run with ALPHA versions of Python 3.11. "
             errMsg += "Please downgrade to some stable Python version"
             logger.critical(errMsg)
             raise SystemExit
@@ -421,7 +421,7 @@ def main():
 
         elif "'WebSocket' object has no attribute 'status'" in excMsg:
             errMsg = "wrong websocket library detected"
-            errMsg += " (Reference: 'https://github.com/sqlmapproject/sqlmap/issues/4572#issuecomment-775041086')"
+            errMsg += " (Reference: 'https://github.com/Injectionmap_v2project/Injectionmap_v2/issues/4572#issuecomment-775041086')"
             logger.critical(errMsg)
             raise SystemExit
 
@@ -432,7 +432,7 @@ def main():
             raise SystemExit
 
         elif any(_ in excMsg for _ in ("unable to access item 'liveTest'",)):
-            errMsg = "detected usage of files from different versions of sqlmap"
+            errMsg = "detected usage of files from different versions of Injectionmap_v2"
             logger.critical(errMsg)
             raise SystemExit
 
@@ -490,7 +490,7 @@ def main():
             logger.critical(errMsg)
             raise SystemExit
 
-        elif all(_ in excMsg for _ in ("No such file", "sqlmap.conf", "Test")):
+        elif all(_ in excMsg for _ in ("No such file", "Injectionmap_v2.conf", "Test")):
             errMsg = "you are trying to run (hidden) development tests inside the production environment"
             logger.critical(errMsg)
             raise SystemExit
@@ -554,7 +554,7 @@ def main():
         kb.threadContinue = False
 
         if (getDaysFromLastUpdate() or 0) > LAST_UPDATE_NAGGING_DAYS:
-            warnMsg = "your sqlmap version is outdated"
+            warnMsg = "your Injectionmap_v2 version is outdated"
             logger.warning(warnMsg)
 
         if conf.get("showTime"):
@@ -584,7 +584,7 @@ def main():
             try:
                 with openFile(conf.harFile, "w+b") as f:
                     json.dump(conf.httpCollector.obtain(), fp=f, indent=4, separators=(',', ': '))
-            except SqlmapBaseException as ex:
+            except Injectionmap_v2BaseException as ex:
                 errMsg = getSafeExString(ex)
                 logger.critical(errMsg)
 
@@ -599,7 +599,7 @@ def main():
         while threading.active_count() > 1 and (time.time() - _) > THREAD_FINALIZATION_TIMEOUT:
             time.sleep(0.01)
 
-        if cmdLineOptions.get("sqlmapShell"):
+        if cmdLineOptions.get("Injectionmap_v2Shell"):
             cmdLineOptions.clear()
             conf.clear()
             kb.clear()

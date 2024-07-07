@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: sqlmapapi OpenAPI/Swagger specification
+  title: Injectionsmapapi OpenAPI/Swagger specification
   version: '0.1'
 paths:
   /version:
