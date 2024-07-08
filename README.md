@@ -1,1 +1,76 @@
-# Injection Mapp
+# Injectionmap_v2
+
+<a href="https://github.com/pxcs/Injectionmap_v2/"><p align="center">
+<img src="/licenses/injectionmap.png">
+</p></a>
+
+## Introduction
+
+**Injectionmap_v2** is an advanced open-source penetration testing tool that `automates` the detection and exploitation of various types of vulnerabilities in web applications. Building on the capabilities of SQLMap, Injectionmap_v2 expands its scope to include not only SQL injection but also Blind SQL, NoSQL, Command, LDAP, Directory Traversal, and other injection techniques. 
+
+## Features
+
+> - Comprehensive Injection Support: Detects and exploits SQL, Blind SQL, NoSQL, Command, LDAP, Directory Traversal, and other injection vulnerabilities.
+> - Wide DBMS Support: Compatible with MySQL, Oracle, PostgreSQL, Microsoft SQL Server, SQLite, MongoDB, and many more.
+> - Automated Testing: Automates the process of finding and exploiting injection vulnerabilities.
+> - Advanced Techniques: Uses a variety of techniques including boolean-based blind, time-based blind, error-based, UNION query-based, stacked queries, and more.
+> - Payloads and Tampering: Includes numerous payloads and tamper scripts to bypass security mechanisms.
+> - Database Fingerprinting: Identifies the specific version and features of the targeted DBMS.
+> - Data Extraction: Extracts data such as database schema, tables, columns, and sensitive data.
+> - Command Execution: Executes arbitrary commands on the database server if privileges allow.
+> - Integration: Can be integrated with other tools and scripts for enhanced security testing.
+
+## Installation
+
+Clone the repository:
+
+```shell
+git clone https://github.com/pxcs/Injectionmap_v2.git
+cd injectionmap_v2
+```
+
+Install the required dependencies:
+
+```shell
+pip install -r requirements.txt
+```
+
+## Usage
+
+*Injectionmap_v2* is designed to be easy to use with a command line interface, below are some example commands:
+
+**To perform a basic SQL injection test:**
+
+```shell
+python injectionmap_v2.py -u "http://example.com/vulnerable.php?id=1"
+```
+**Another** injections attack modules:
+
+> - Blind SQL Injection
+
+> - NoSQL Injection
+
+> - Command Injection
+
+> - LDAP Injection
+
+> - Directory Traversal
+
+# Contribution
+
+Contributions are welcome! Please submit a pull request or open an issue to discuss any changes you would like to make.
+License. This project is licensed under the Injectionmap_v2 General Public License. See the LICENSE file for details.
+Contact
+
+Code contributors of Injectionmap_v2:
+
+[![](https://avatars.githubusercontent.com/u/675322?s=50&v=4)](https://github.com/bdamele)
+[![](https://avatars.githubusercontent.com/u/50994705?s=50&v=4)](https://github.com/projectdiscovery)
+
+**Thanks to**
+- SQLMap
+- GangstaCrew
+- The Designer
+
+## For more information 
+visit our GitHub page or contact us at pxmxx3csz@outlook.com
