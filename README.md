@@ -8,6 +8,8 @@
 
 **Injectionmap_v2** is an advanced open-source penetration testing tool that `automates` the detection and exploitation of various types of vulnerabilities in web applications. Building on the capabilities of SQLMap, Injectionmap_v2 expands its scope to include not only SQL injection but also Blind SQL, NoSQL, Command, LDAP, Directory Traversal, and other injection techniques. 
 
+*Python3* based
+
 ## Features
 
 > - Comprehensive Injection Support: Detects and exploits SQL, Blind SQL, NoSQL, Command, LDAP, Directory Traversal, and other injection vulnerabilities.
@@ -31,7 +33,7 @@ cd injectionmap_v2
 
 Install the required dependencies:
 
-```shell
+```python
 pip install -r requirements.txt
 ```
 
@@ -41,13 +43,13 @@ pip install -r requirements.txt
 
 **To perform a basic SQL injection test:**
 
-```shell
+```python
 python injectionmap_v2.py -u "http://example.com/vulnerable.php?id=1"
 ```
 
 To get a list of **basic options** and switches use:
 
-```shell
+```python
 python sqlmap.py -h
 ```
 
