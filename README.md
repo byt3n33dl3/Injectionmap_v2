@@ -28,7 +28,7 @@ Clone the repository:
 
 ```shell
 git clone https://github.com/pxcs/Injectionmap_v2.git
-cd injectionmap_v2
+cd Injectionmap_v2
 ```
 
 Install the required dependencies:
@@ -44,22 +44,22 @@ pip install -r requirements.txt
 **To perform a basic SQL injection test:**
 
 ```python
-python injectionmap_v2.py -u "http://example.com/vulnerable.php?id=1"
+python Injectionmap_v2 -u "http://example.com/vulnerable.php?id=1"
 ```
 
 To get a list of **basic options** and switches use:
 
 ```python
-python sqlmap.py -h
+python Injectionmap_v2 -h
 ```
 
 To get a list of **all options** and switches use:
 
 ```shell
-python sqlmap.py -hh
+python Injectionmap_v2 -hh
 ```
 
-You can find a sample run [here](https://asciinema.org/a/46601).
+You can find a sample run [here!](https://asciinema.org/a/46601).
 
 **Another** injections attack modules:
 
