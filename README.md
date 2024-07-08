@@ -44,6 +44,21 @@ pip install -r requirements.txt
 ```shell
 python injectionmap_v2.py -u "http://example.com/vulnerable.php?id=1"
 ```
+
+To get a list of **basic options** and switches use:
+
+```shell
+python sqlmap.py -h
+```
+
+To get a list of **all options** and switches use:
+
+```shell
+python sqlmap.py -hh
+```
+
+You can find a sample run [here](https://asciinema.org/a/46601).
+
 **Another** injections attack modules:
 
 > - Blind SQL Injection
@@ -72,5 +87,5 @@ Code contributors of Injectionmap_v2:
 - GangstaCrew
 - The Designer
 
-## For more information 
-visit our GitHub page or contact us at pxmxx3csz@outlook.com
+## For more informations 
+visit our GitHub page, our org, or contact us at pxmxx3csz@outlook.com
