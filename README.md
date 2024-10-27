@@ -4,22 +4,30 @@
 <img src="/licenses/injectionmap.png">
 </p></a>
 
-## Introduction
+## Introducing `Injectionmap_v2`
 
-**Injectionmap_v2** is an advanced open-source penetration testing tool that `automates` the detection and exploitation of various types of vulnerabilities in web applications. Building on the capabilities of SQLMap, Injectionmap_v2 expands its scope to include not only SQL injection but also Blind SQL, NoSQL, Command, LDAP, Directory Traversal, and other injection techniques. 
+**Injectionmap_v2** is an advanced open-source penetration testing tool that `automates` the detection and exploitation of various types of vulnerabilities in web applications. Building on the capabilities from `SQLMap Project`, Injectionmap_v2 expands its scope to include not only SQL injection but also Blind SQL, NoSQL, Command, LDAP, Directory Traversal, and other Injection Attack techniques. 
 
-*Python3* based
+# `Python3` and `C`/ `Master` Based
 
 ## Features
 
 > - Comprehensive Injection Support: Detects and exploits SQL, Blind SQL, NoSQL, Command, LDAP, Directory Traversal, and other injection vulnerabilities.
+
 > - Wide DBMS Support: Compatible with MySQL, Oracle, PostgreSQL, Microsoft SQL Server, SQLite, MongoDB, and many more.
+
 > - Automated Testing: Automates the process of finding and exploiting injection vulnerabilities.
+
 > - Advanced Techniques: Uses a variety of techniques including boolean-based blind, time-based blind, error-based, UNION query-based, stacked queries, and more.
+
 > - Payloads and Tampering: Includes numerous payloads and tamper scripts to bypass security mechanisms.
+
 > - Database Fingerprinting: Identifies the specific version and features of the targeted DBMS.
+
 > - Data Extraction: Extracts data such as database schema, tables, columns, and sensitive data.
+
 > - Command Execution: Executes arbitrary commands on the database server if privileges allow.
+
 > - Integration: Can be integrated with other tools and scripts for enhanced security testing.
 
 ## Installation
@@ -27,7 +35,7 @@
 Clone the repository:
 
 ```shell
-git clone https://github.com/pxcs/Injectionmap_v2.git
+git clone https://github.com/byt3n33dl3/Injectionmap_v2.git
 cd Injectionmap_v2
 ```
 
@@ -39,24 +47,25 @@ pip install -r requirements.txt
 
 ## Usage
 
-*Injectionmap_v2* is designed to be easy to use with a command line interface, below are some example commands:
+`Injectionmap_v2` is designed to be easy to use with a command line interface, below are some example commands:
 
 **To perform a basic SQL injection test:**
 
 ```python
-python Injectionmap_v2 -u "http://example.com/vulnerable.php?id=1"
+python injectionmap -u "http://example.com/vulnerable.php?id=1"
 ```
 
 To get a list of **basic options** and switches use:
 
 ```python
-python Injectionmap_v2 -h
+python3 injectionmap -h
+python3 injectionmap -hh
 ```
 
 To get a list of **all options** and switches use:
 
 ```shell
-python Injectionmap_v2 -hh
+python3 Injectionmap_v2 -hh
 ```
 
 You can find a sample run [here!](https://asciinema.org/a/46601).
@@ -66,6 +75,8 @@ You can find a sample run [here!](https://asciinema.org/a/46601).
 > - Blind SQL Injection
 
 > - NoSQL Injection
+
+> - GQL Injection
 
 > - Command Injection
 
@@ -81,13 +92,17 @@ Contact
 
 Code contributors of Injectionmap_v2:
 
+[![](https://github.com/byt3n33dl3.png?size=50)](https://github.com/byt3n33dl3)
 [![](https://avatars.githubusercontent.com/u/675322?s=50&v=4)](https://github.com/bdamele)
+[![](https://github.com/zblurx.png?size=50)](https://github.com/zblurx)
+[![](https://github.com/sqlmapproject.png?size=50)](https://github.com/sqlmapproject)
 [![](https://avatars.githubusercontent.com/u/50994705?s=50&v=4)](https://github.com/projectdiscovery)
 
-**Thanks to**
-- SQLMap
+# Thanks to
+
+- SQLMapproject
 - GangstaCrew
 - The Designer
 
-## For more informations 
-visit our GitHub page, our org, or contact us at pxmxx3csz@outlook.com
+## For more `informations`
+Visit our GitHub `Organization` , or contact us at `byt3n33dl3@proton.me`
