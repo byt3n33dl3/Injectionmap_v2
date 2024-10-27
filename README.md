@@ -30,7 +30,7 @@
 
 > - Integration: Can be integrated with other tools and scripts for enhanced security testing.
 
-## Installation
+# Installation
 
 Clone the repository:
 
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 **To perform a basic SQL injection test:**
 
 ```python
-python injectionmap -u "http://example.com/vulnerable.php?id=1"
+python3 injectionmap -u "http://example.com/vulnerable.php?id=1"
 ```
 
 To get a list of **basic options** and switches use:
@@ -90,17 +90,17 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 License. This project is licensed under the Injectionmap_v2 General Public License. See the LICENSE file for details.
 Contact
 
-Code contributors of Injectionmap_v2:
+# Code contributors of Injectionmap_v2:
 
 [![](https://github.com/byt3n33dl3.png?size=50)](https://github.com/byt3n33dl3)
 [![](https://avatars.githubusercontent.com/u/675322?s=50&v=4)](https://github.com/bdamele)
 [![](https://github.com/zblurx.png?size=50)](https://github.com/zblurx)
-[![](https://github.com/sqlmapproject.png?size=50)](https://github.com/sqlmapproject)
+[![](https://github.com/guinslym.png?size=50)](https://github.com/guinslym)
 [![](https://avatars.githubusercontent.com/u/50994705?s=50&v=4)](https://github.com/projectdiscovery)
 
 # Thanks to
 
-- SQLMapproject
+>- SQLMapproject
 - GangstaCrew
 - The Designer
 
